@@ -8,7 +8,7 @@ TERMUX_PKG_SHA256=(cea7cd31f8080ed8ec6725419e58bbe04ab0dd4fa0071526bd7cf0cd8d1bf
 TERMUX_PKG_SRCURL=(https://www.kernel.org/pub/linux/docs/man-pages/man-pages-${TERMUX_PKG_VERSION}.tar.xz
 		   https://www.kernel.org/pub/linux/docs/man-pages/man-pages-posix/man-pages-posix-${TERMUX_PKG_VERSION[1]}-a.tar.xz)
 TERMUX_PKG_DEPENDS="man"
-TERMUX_PKG_EXTRA_MAKE_ARGS="prefix=$TERMUX_PREFIX"
+TERMUX_PKG_EXTRA_MAKE_ARGS="prefix=$TERMUX_PREFIX DESTDIR=$TERMUX_PKG_MASSAGEDIR"
 TERMUX_PKG_PLATFORM_INDEPENDENT=true
 TERMUX_PKG_BUILD_IN_SRC=true
 # Problems with changing permissions of non-built files
